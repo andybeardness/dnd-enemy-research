@@ -158,7 +158,6 @@ def health_test():
     health_test_damage()
     health_test_heal()
 
-    print("Tests is ok")
 
-
-health_test()
+if __name__ == '__main__':
+    health_test()

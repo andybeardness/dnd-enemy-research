@@ -1,3 +1,6 @@
+def default_perks():
+    return [15, 14, 13, 12, 10, 8]
+
 class Perks:
     def __init__(
             self,
@@ -57,4 +60,5 @@ def tests_perks():
     assert perks.p_cha() == 1
 
 
-tests_perks()
+if __name__ == '__main__':
+    tests_perks()

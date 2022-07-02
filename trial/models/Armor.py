@@ -31,4 +31,5 @@ def test_armor():
     assert armor.is_hit(hits=1)
     assert not armor.is_hit(hits=-1)
 
-test_armor()
+if __name__ == '__main__':
+    test_armor()

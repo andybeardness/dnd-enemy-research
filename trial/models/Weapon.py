@@ -5,7 +5,7 @@ class Weapon:
         self.__dice__ = dice
         self.__modifier__ = modifier
 
-    def __attack__(self):
+    def attack(self):
         return random.randint(1, self.__dice__) + self.__modifier__
 
 
@@ -14,7 +14,7 @@ def test_loop_min_max(weapon, loops):
     _max = None
 
     for _ in range(0, loops):
-        attack = weapon.__attack__()
+        attack = weapon.attack()
 
         if (_min is None or attack < _min):
             _min = attack
@@ -34,4 +34,5 @@ def test_weapon():
     assert _min == 1
     assert _max == 8
 
-test_weapon()
+if __name__ == '__main__':
+    test_weapon()

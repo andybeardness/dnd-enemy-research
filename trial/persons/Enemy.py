@@ -1,34 +1,13 @@
-from trial.models.Perks import Perks
-from trial.models.Modifiers import Modifiers
 from trial.models.Weapon import Weapon
 from trial.models.Health import Health
 from trial.models.Armor import Armor
 
 
-class Hero:
+class Enemy:
     def __init__(self,
-                 h_str, h_dex, h_con, h_int, h_wis, h_cha,
                  weapon_dice, weapon_modifier,
                  max_health, current_health,
                  armor):
-
-        self.__perks__ = Perks(
-            p_str=h_str,
-            p_dex=h_dex,
-            p_con=h_con,
-            p_int=h_int,
-            p_wis=h_wis,
-            p_cha=h_cha,
-        )
-
-        self.__modifiers__ = Modifiers(
-            m_str=h_str,
-            m_dex=h_dex,
-            m_con=h_con,
-            m_int=h_int,
-            m_wis=h_wis,
-            m_cha=h_cha,
-        )
 
         self.__weapon__ = Weapon(
             dice=weapon_dice,
@@ -41,7 +20,7 @@ class Hero:
         )
 
         self.__armor__ = Armor(
-            armor=armor,
+            armor=armor
         )
 
     def is_alive(self):

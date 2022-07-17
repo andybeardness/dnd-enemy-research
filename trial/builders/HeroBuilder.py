@@ -9,12 +9,7 @@ def build_random_default_hero():
     shuffled_perks = default_perks().copy()
     random.shuffle(shuffled_perks)
 
-    b_str = shuffled_perks[0]
-    b_dex = shuffled_perks[1]
-    b_con = shuffled_perks[2]
-    b_int = shuffled_perks[3]
-    b_wis = shuffled_perks[4]
-    b_cha = shuffled_perks[5]
+    b_str, b_dex, b_con, b_int, b_wis, b_cha = shuffled_perks
 
     weapon_dice = random.randint(0, 3)
     weapon_dice = weapon_dice * 2
